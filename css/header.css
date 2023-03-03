@@ -98,8 +98,9 @@
 }
 
 .footer .row {
-    align-items: flex-start;
+    align-items: center;
     margin: unset;
+    padding: 30px;
 }
 
 .footer .row .footer-item {
@@ -114,10 +115,21 @@
     width: 100%;
 }
 
+.footer .row p {
+    font-size: 12px;
+    max-width: 750px;
+    text-align: center;
+}
+
+.footer .row a {
+    font-weight: 400;
+}
+
 .footer .row p,
 .footer .row a {
     text-align: left;
     color: var(--white);
+    opacity: 0.7;
 }
 
 .footer .row .description {

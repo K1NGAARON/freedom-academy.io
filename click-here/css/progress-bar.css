@@ -1,0 +1,56 @@
+@keyframes animate-stripes {
+    0% {
+        background-position: 0 0;
+   }
+    100% {
+        background-position: 100% 100%;
+   }
+}
+
+@keyframes auto-progress {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 75%;
+    }
+}
+
+.progress-bar-container {
+    display: flex;
+    width: 100%;
+}
+
+.progress-bar {
+    background-color: #1a1a1a;
+    height: 45px;
+    width: 450px;
+    margin: 0 auto 20px auto;
+    border-radius: 5px;
+    box-shadow: 0 1px 0 var(--primary);
+}
+
+.stripes {
+    background-size: 30px 30px;
+    background-image: linear-gradient(135deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+}
+
+.stripes.animated {
+    animation: animate-stripes 0.6s linear infinite;
+}
+
+.progress-bar-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 45px;
+    width: 0%;
+    background-color: var(--primary);
+    border-radius: 3px;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, .5) inset;
+    position: relative;
+    animation: auto-progress 1s linear;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
