@@ -1,0 +1,102 @@
+.section .row * {
+    text-align: left;
+}
+
+.section .row {
+    align-items: start;
+}
+
+.section h1,
+.section h2,
+.section h3 {
+    text-transform: none;
+}
+
+.section h1 {
+    align-self: center;
+}
+
+.section h2 {
+    font-size: 30px;
+    margin-top: 30px;
+}
+
+.section .center {
+    text-align: center;
+}
+
+.section .bold {
+    font-weight: 700;
+}
+
+.section li {
+    margin: 10px 0;
+}
+
+.section a {
+    font-size: 16px;
+}
+
+
+.team {
+    display: flex;
+    gap: 20px;
+    flex-flow: row wrap;
+}
+
+.team .wrapper {
+    flex: 1 0 40%;
+    display: flex;
+}
+
+.team .wrapper .item {
+    flex: 1 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.team .wrapper .item:nth-child(2) {
+    flex: 2 0;
+}
+
+.team .wrapper .item img {
+    border-radius: 50%;
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+}
+
+.team h5 {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.team .position {
+    font-size: 18px;
+}
+
+.team .intro {
+    font-size: 14px;
+    font-style: italic;
+    color: #777;
+    margin-top: 10px;
+}
+
+@media (max-width: 560px) {
+    .team {
+        gap: 40px;
+    }
+
+    .team .wrapper .item img {
+        max-width: 125px;
+    }
+}
+
+@media (max-width: 760px) {
+    .team .wrapper {
+        flex: 1 0 100%;
+        gap: 20px;
+    }
+}
